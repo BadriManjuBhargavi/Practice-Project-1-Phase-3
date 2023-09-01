@@ -1,0 +1,28 @@
+1.CREATE DATABASE School: This line creates a new database named "School."
+
+2.USE School: This command selects the "School" database, making it the active database for subsequent commands.
+
+3.CREATE TABLE Student: This command creates the "Students" table with the following columns:
+
+4.StudentID: An integer column that serves as the primary key for the table.
+FirstName: A variable character (VARCHAR) column that stores the first name of the student.
+LastName: A VARCHAR column that stores the last name of the student.
+BirthDate: A date column that stores the birthdate of the student.
+ClassID: An integer column that references the "ClassID" column in the "Classes" table. This column establishes a foreign key relationship between the "Students" and "Classes" tables.
+CREATE TABLE Subjects: This command creates the "Subjects" table with the following columns:
+
+SubjectID: An integer column that serves as the primary key for the table.
+SubjectName: A VARCHAR column that stores the name of the subject.
+5.CREATE TABLE Classes : This command creates the "Classes" table with the following columns:
+
+ClassID: An integer column that serves as the primary key for the table.
+ClassName: A VARCHAR column that stores the name of the class.
+CREATE INDEX IDX_Students_ClassID ON Students (ClassID): This command creates an index on the "ClassID" column in the "Students" table. Indexes help improve the speed of data retrieval operations.
+
+6.CREATE UNIQUE INDEX UQ_Subjects_SubjectName ON Subjects (SubjectName): This command creates a unique index on the "SubjectName" column in the "Subjects" table. This ensures that each subject name is unique.
+
+7.SELECT * FROM Students: This line retrieves all rows from the "Students" table and displays them.
+
+8.SELECT * FROM Subjects: This line retrieves all rows from the "Subjects" table and displays them.
+
+9.SELECT * FROM Classes: This line retrieves all rows from the "Classes" table and displays them.
